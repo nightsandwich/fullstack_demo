@@ -1,3 +1,6 @@
+//CLIENT SIDE
+//SINGLE PAGE APPLICATION
+
 import React, { Component } from 'react';
 import { render } from 'react-dom';
 import axios from 'axios';
@@ -10,7 +13,7 @@ class App extends Component{
       loading: true
     };
   }
-  async componentDidMount(){
+  async componentDidMount(){ //when component first loads users is an empty array
     this.setState({
       users: (await axios.get('/api/users')).data,
       loading: false
